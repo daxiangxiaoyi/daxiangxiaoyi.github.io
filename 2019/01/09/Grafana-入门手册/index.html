@@ -79,13 +79,17 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="Grafana 是什么Grafana是一个开源的，拥有丰富dashboard和图表编辑的指标分析平台，和Kibana不同的是Grafana专注于时序类图表分析，而且支持多种数据源，如Graphite、InfluxDB、Elasticsearch、Mysql、K8s、Zabbix等。：Grafana能干什么Grafana的安装Grafana官方提供Ubuntu/Debian、Centos/Redha">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Grafana 入门手册">
+<meta property="og:url" content="http://yoursite.com/2019/01/09/Grafana-入门手册/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Grafana 是什么Grafana是一个开源的，拥有丰富dashboard和图表编辑的指标分析平台，和Kibana不同的是Grafana专注于时序类图表分析，而且支持多种数据源，如Graphite、InfluxDB、Elasticsearch、Mysql、K8s、Zabbix等。：Grafana能干什么Grafana的安装Grafana官方提供Ubuntu/Debian、Centos/Redha">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-01-09T10:50:00.974Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="Grafana 入门手册">
+<meta name="twitter:description" content="Grafana 是什么Grafana是一个开源的，拥有丰富dashboard和图表编辑的指标分析平台，和Kibana不同的是Grafana专注于时序类图表分析，而且支持多种数据源，如Graphite、InfluxDB、Elasticsearch、Mysql、K8s、Zabbix等。：Grafana能干什么Grafana的安装Grafana官方提供Ubuntu/Debian、Centos/Redha">
 
 
 
@@ -115,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/">
+  <link rel="canonical" href="http://yoursite.com/2019/01/09/Grafana-入门手册/">
 
 
 
 
 
-  <title>Hexo</title>
+  <title>Grafana 入门手册 | Hexo</title>
   
 
 
@@ -140,8 +144,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -244,9 +247,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -276,9 +279,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/01/09/Grafana-入门手册/" itemprop="url">Grafana 入门手册</a></h1>
+          <h1 class="post-title" itemprop="name headline">Grafana 入门手册</h1>
         
 
         <div class="post-meta">
@@ -304,6 +305,16 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/01/09/Grafana-入门手册/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/2019/01/09/Grafana-入门手册/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -328,9 +339,7 @@
       
 
       
-        
-          
-            <p>Grafana 是什么<br>Grafana是一个开源的，拥有丰富dashboard和图表编辑的指标分析平台，和Kibana不同的是Grafana专注于时序类图表分析，而且支持多种数据源，如Graphite、InfluxDB、Elasticsearch、Mysql、K8s、Zabbix等。：<br>Grafana能干什么<br>Grafana的安装<br>Grafana官方提供Ubuntu/Debian、Centos/Redhat、Windows、Mac平台的安装包，可以从源码构建，并且可以使用Docker构建容器。这里主要介绍一下在Centos下的安装和Docker安装，其他安装方式请参考官方网站<a href="http://docs.grafana.org/installation/" target="_blank" rel="noopener">http://docs.grafana.org/installation/</a></p>
+        <p>Grafana 是什么<br>Grafana是一个开源的，拥有丰富dashboard和图表编辑的指标分析平台，和Kibana不同的是Grafana专注于时序类图表分析，而且支持多种数据源，如Graphite、InfluxDB、Elasticsearch、Mysql、K8s、Zabbix等。：<br>Grafana能干什么<br>Grafana的安装<br>Grafana官方提供Ubuntu/Debian、Centos/Redhat、Windows、Mac平台的安装包，可以从源码构建，并且可以使用Docker构建容器。这里主要介绍一下在Centos下的安装和Docker安装，其他安装方式请参考官方网站<a href="http://docs.grafana.org/installation/" target="_blank" rel="noopener">http://docs.grafana.org/installation/</a></p>
 <p>Centos下安装<br>直接使用Yum<br>sudo yum install <rpm package="" url=""><br>例如<br>sudo yum install <a href="https://dl.grafana.com/oss/release/grafana-5.4.2-1.x86_64.rpm" target="_blank" rel="noopener">https://dl.grafana.com/oss/release/grafana-5.4.2-1.x86_64.rpm</a></rpm></p>
 <p>通过YUM 仓库安装<br>在文件中/etc/yum.repos.d/grafana.repo 写入<br>[grafana]<br>name=grafana<br>baseurl=<a href="https://packages.grafana.com/oss/rpm" target="_blank" rel="noopener">https://packages.grafana.com/oss/rpm</a><br>repo_gpgcheck=1<br>enabled=1<br>gpgcheck=1<br>gpgkey=<a href="https://packages.grafana.com/gpg.key" target="_blank" rel="noopener">https://packages.grafana.com/gpg.key</a><br>sslverify=1<br>sslcacert=/etc/pki/tls/certs/ca-bundle.crt</p>
 <p>然后<br>sudo yum install grafana</p>
@@ -345,8 +354,6 @@
 <h1 id="create-a-persistent-volume-for-your-data-in-var-lib-grafana-database-and-plugins"><a href="#create-a-persistent-volume-for-your-data-in-var-lib-grafana-database-and-plugins" class="headerlink" title="create a persistent volume for your data in /var/lib/grafana (database and plugins)"></a>create a persistent volume for your data in /var/lib/grafana (database and plugins)</h1><p>docker volume create grafana-storage</p>
 <h1 id="start-grafana"><a href="#start-grafana" class="headerlink" title="start grafana"></a>start grafana</h1><p>docker run \<br>  -d \<br>  -p 3000:3000 \<br>  –name=grafana \<br>  -v grafana-storage:/var/lib/grafana \<br>  grafana/grafana</p>
 
-          
-        
       
     </div>
     
@@ -363,131 +370,28 @@
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/27/Kubernetes-笔记整理/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="daxiangxiaoyi">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/27/Kubernetes-笔记整理/" itemprop="url">Kubernetes 笔记整理</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-27T14:32:53+08:00">
-                2018-12-27
-              </time>
+              <a href="/2018/12/27/Kubernetes-笔记整理/" rel="next" title="Kubernetes 笔记整理">
+                <i class="fa fa-chevron-left"></i> Kubernetes 笔记整理
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -497,257 +401,11 @@
   </article>
 
 
-    
-      
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/27/从今天起，面朝大海/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="daxiangxiaoyi">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/27/从今天起，面朝大海/" itemprop="url">从今天起，面朝大海</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-27T10:28:40+08:00">
-                2018-12-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            
-          
-        
+    <div class="post-spread">
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/26/hello-world/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="daxiangxiaoyi">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/26/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-26T22:01:05+08:00">
-                2018-12-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
 
 
           </div>
@@ -755,6 +413,17 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      
+        <div id="gitment-container"></div>
+      
+    </div>
+
+  
+
+
 
         </div>
         
@@ -775,8 +444,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -834,6 +512,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#create-a-persistent-volume-for-your-data-in-var-lib-grafana-database-and-plugins"><span class="nav-number">1.</span> <span class="nav-text">create a persistent volume for your data in /var/lib/grafana (database and plugins)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#start-grafana"><span class="nav-number">2.</span> <span class="nav-text">start grafana</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -974,6 +668,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
