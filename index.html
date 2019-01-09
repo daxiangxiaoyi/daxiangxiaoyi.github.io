@@ -330,11 +330,14 @@
       
         
           
-            <p>#Grafana 是什么<br>Grafana是一个开源的，拥有丰富dashboard和图表编辑的指标分析平台，和Kibana不同的是Grafana专注于时序类图表分析，而且支持多种数据源，如Graphite、InfluxDB、Elasticsearch、Mysql、K8s、Zabbix等。：</p>
-<p>#Grafana能干什么</p>
-<p>#Grafana的安装<br>Grafana官方提供Ubuntu/Debian、Centos/Redhat、Windows、Mac平台的安装包，可以从源码构建，并且可以使用Docker构建容器。这里主要介绍一下在Centos下的安装和Docker安装，其他安装方式请参考官方网站<a href="http://docs.grafana.org/installation/" target="_blank" rel="noopener">http://docs.grafana.org/installation/</a></p>
-<p>##Centos下安装<br>*直接使用Yum<br>sudo yum install <rpm package="" url=""><br>例如<br>sudo yum install <a href="https://dl.grafana.com/oss/release/grafana-5.4.2-1.x86_64.rpm" target="_blank" rel="noopener">https://dl.grafana.com/oss/release/grafana-5.4.2-1.x86_64.rpm</a></rpm></p>
-<p>*通过YUM 仓库安装<br>在文件中/etc/yum.repos.d/grafana.repo 写入<br>[grafana]<br>name=grafana<br>baseurl=<a href="https://packages.grafana.com/oss/rpm" target="_blank" rel="noopener">https://packages.grafana.com/oss/rpm</a><br>repo_gpgcheck=1<br>enabled=1<br>gpgcheck=1<br>gpgkey=<a href="https://packages.grafana.com/gpg.key" target="_blank" rel="noopener">https://packages.grafana.com/gpg.key</a><br>sslverify=1<br>sslcacert=/etc/pki/tls/certs/ca-bundle.crt</p>
+            <h1 id="Grafana-是什么"><a href="#Grafana-是什么" class="headerlink" title="Grafana 是什么"></a>Grafana 是什么</h1><p>Grafana是一个开源的，拥有丰富dashboard和图表编辑的指标分析平台，和Kibana不同的是Grafana专注于时序类图表分析，而且支持多种数据源，如Graphite、InfluxDB、Elasticsearch、Mysql、K8s、Zabbix等。：</p>
+<h1 id="Grafana能干什么"><a href="#Grafana能干什么" class="headerlink" title="Grafana能干什么"></a>Grafana能干什么</h1><h1 id="Grafana的安装"><a href="#Grafana的安装" class="headerlink" title="Grafana的安装"></a>Grafana的安装</h1><p>Grafana官方提供Ubuntu/Debian、Centos/Redhat、Windows、Mac平台的安装包，可以从源码构建，并且可以使用Docker构建容器。这里主要介绍一下在Centos下的安装和Docker安装，其他安装方式请参考官方网站<a href="http://docs.grafana.org/installation/" target="_blank" rel="noopener">http://docs.grafana.org/installation/</a></p>
+<h2 id="Centos下安装"><a href="#Centos下安装" class="headerlink" title="Centos下安装"></a>Centos下安装</h2><ul>
+<li><p>直接使用Yum<br>sudo yum install <rpm package="" url=""><br>例如<br>sudo yum install <a href="https://dl.grafana.com/oss/release/grafana-5.4.2-1.x86_64.rpm" target="_blank" rel="noopener">https://dl.grafana.com/oss/release/grafana-5.4.2-1.x86_64.rpm</a></rpm></p>
+</li>
+<li><p>通过YUM 仓库安装<br>在文件中/etc/yum.repos.d/grafana.repo 写入<br>[grafana]<br>name=grafana<br>baseurl=<a href="https://packages.grafana.com/oss/rpm" target="_blank" rel="noopener">https://packages.grafana.com/oss/rpm</a><br>repo_gpgcheck=1<br>enabled=1<br>gpgcheck=1<br>gpgkey=<a href="https://packages.grafana.com/gpg.key" target="_blank" rel="noopener">https://packages.grafana.com/gpg.key</a><br>sslverify=1<br>sslcacert=/etc/pki/tls/certs/ca-bundle.crt</p>
+</li>
+</ul>
 <p>然后<br>sudo yum install grafana</p>
 <p>启动Grafana<br> systemctl start grafana-server</p>
 <p>##Docker安装<br>通过官方镜像安装运行Grafana非常简单<br>一条命令就搞定<br>docker run -d -p 3000:3000 grafana/grafana<br>配置文件的修改，所有配置文件conf/grafana.ini中的选项都可以用环境变量覆盖，格式为GF_<sectionname>_<keyname>，例如<br>docker run \<br>  -d \<br>  -p 3000:3000 \<br>  –name=grafana \<br>  -e “GF_SERVER_ROOT_URL=<a href="http://grafana.server.name&quot;" target="_blank" rel="noopener">http://grafana.server.name&quot;</a> \<br>  -e “GF_SECURITY_ADMIN_PASSWORD=secret” \<br>  grafana/grafana</keyname></sectionname></p>
