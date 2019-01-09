@@ -479,7 +479,7 @@
 <p>docker run \<br>  -d \<br>  -p 3000:3000 \<br>  –name=grafana \<br>  grafana:latest-with-plugins</p>
 <p>但这种方式删除容器后数据会丢失，官方建议持久化</p>
 <h1 id="create-a-persistent-volume-for-your-data-in-var-lib-grafana-database-and-plugins"><a href="#create-a-persistent-volume-for-your-data-in-var-lib-grafana-database-and-plugins" class="headerlink" title="create a persistent volume for your data in /var/lib/grafana (database and plugins)"></a>create a persistent volume for your data in /var/lib/grafana (database and plugins)</h1><p>docker volume create grafana-storage</p>
-<h1 id="start-grafana"><a href="#start-grafana" class="headerlink" title="start grafana"></a>start grafana</h1><p>docker run \<br>  -d \<br>  -p 3000:3000 \<br>  –name=grafana \<br>  -v grafana-storage:/var/lib/grafana \<br>  grafana/grafana</p>
+<h1 id="start-grafana"><a href="#start-grafana" class="headerlink" title="start grafana"></a>start grafana</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">docker run \</span><br><span class="line">  -d \</span><br><span class="line">  -p 3000:3000 \</span><br><span class="line">  --name=grafana \</span><br><span class="line">  -v grafana-storage:/var/lib/grafana \</span><br><span class="line">  grafana/grafana</span><br></pre></td></tr></table></figure>
 <p>:wq</p>
 
           
