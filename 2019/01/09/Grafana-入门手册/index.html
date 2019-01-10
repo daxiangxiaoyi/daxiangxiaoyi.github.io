@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="Grafana 是什么Grafana是一个开源的，拥有丰富dashboard和图表编辑的指标分析平台，和Kibana不同的是Grafana专注于时序类图表分析，而且支持多种数据源，如Graphite、InfluxDB、Elasticsearch、Mysql、K8s、Zabbix等。 Grafana能干什么Grafana最早其实应该是Kibana3的一个分支，拥有自己的权限管理和用户管理系统，而Ki">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-01-10T02:01:39.083Z">
+<meta property="og:updated_time" content="2019-01-10T02:46:00.650Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Grafana 入门手册">
 <meta name="twitter:description" content="Grafana 是什么Grafana是一个开源的，拥有丰富dashboard和图表编辑的指标分析平台，和Kibana不同的是Grafana专注于时序类图表分析，而且支持多种数据源，如Graphite、InfluxDB、Elasticsearch、Mysql、K8s、Zabbix等。 Grafana能干什么Grafana最早其实应该是Kibana3的一个分支，拥有自己的权限管理和用户管理系统，而Ki">
@@ -369,7 +369,8 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"># create a persistent volume for your data in /var/lib/grafana (database and plugins)</span><br><span class="line">docker volume create grafana-storage</span><br><span class="line"></span><br><span class="line"># start grafana</span><br><span class="line"></span><br><span class="line">docker run \</span><br><span class="line">  -d \</span><br><span class="line">  -p 3000:3000 \</span><br><span class="line">  --name=grafana \</span><br><span class="line">  -v grafana-storage:/var/lib/grafana \</span><br><span class="line">  grafana/grafana</span><br></pre></td></tr></table></figure>
 <h2 id="Grafana的使用"><a href="#Grafana的使用" class="headerlink" title="Grafana的使用"></a>Grafana的使用</h2><p>启动Grafana后，在浏览器输入http:://localhost:3000/ 就进入Grafana的登陆页面，默认用户名和密码都是admin。</p>
 <h3 id="添加数据源"><a href="#添加数据源" class="headerlink" title="添加数据源"></a>添加数据源</h3><p>Grafana使用的第一步是添加数据源，点击左侧菜单栏的齿轮形图标，Configuration-&gt;Data Sources-&gt;Add data source，然后选择对应的数据源填写相关的连接信息即可。</p>
-<h3 id="制作dashboard"><a href="#制作dashboard" class="headerlink" title="制作dashboard"></a>制作dashboard</h3><h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><blockquote>
+<h3 id="制作dashboard"><a href="#制作dashboard" class="headerlink" title="制作dashboard"></a>制作dashboard</h3><p>Dashboard由Row组成，而Row由基本组件Panel组成。添加Row也是在add panel处添加，每一个panel的数据源都可以是任意一个我们添加的data source，这里有很多快捷键，比如常用的Ctrl+S 保存，Ctrl+F 搜索，Ctrl+H 隐藏所有的控制面板。</p>
+<h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><blockquote>
 <p><strong>Data Source：</strong>数据源一般多为时序数据。</p>
 </blockquote>
 <blockquote>
@@ -390,6 +391,7 @@
 <blockquote>
 <p><strong>Dashboard:</strong>这个就很好理解了，通常意义上的仪表盘。可以使用Templating和Annotations。</p>
 </blockquote>
+<p>Grafana还有很多高级的玩法，比如报警，模板，API等，入门篇里就不展开了。快来开始你的第一个炫酷的dashoboard吧！</p>
 
       
     </div>
