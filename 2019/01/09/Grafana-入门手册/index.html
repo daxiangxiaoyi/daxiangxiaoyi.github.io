@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="Grafana 是什么Grafana是一个开源的，拥有丰富dashboard和图表编辑的指标分析平台，和Kibana不同的是Grafana专注于时序类图表分析，而且支持多种数据源，如Graphite、InfluxDB、Elasticsearch、Mysql、K8s、Zabbix等。 Grafana能干什么Grafana最早其实应该是Kibana3的一个分支，拥有自己的权限管理和用户管理系统，而Ki">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-01-09T14:28:31.154Z">
+<meta property="og:updated_time" content="2019-01-10T02:01:39.083Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Grafana 入门手册">
 <meta name="twitter:description" content="Grafana 是什么Grafana是一个开源的，拥有丰富dashboard和图表编辑的指标分析平台，和Kibana不同的是Grafana专注于时序类图表分析，而且支持多种数据源，如Graphite、InfluxDB、Elasticsearch、Mysql、K8s、Zabbix等。 Grafana能干什么Grafana最早其实应该是Kibana3的一个分支，拥有自己的权限管理和用户管理系统，而Ki">
@@ -370,7 +370,25 @@
 <h2 id="Grafana的使用"><a href="#Grafana的使用" class="headerlink" title="Grafana的使用"></a>Grafana的使用</h2><p>启动Grafana后，在浏览器输入http:://localhost:3000/ 就进入Grafana的登陆页面，默认用户名和密码都是admin。</p>
 <h3 id="添加数据源"><a href="#添加数据源" class="headerlink" title="添加数据源"></a>添加数据源</h3><p>Grafana使用的第一步是添加数据源，点击左侧菜单栏的齿轮形图标，Configuration-&gt;Data Sources-&gt;Add data source，然后选择对应的数据源填写相关的连接信息即可。</p>
 <h3 id="制作dashboard"><a href="#制作dashboard" class="headerlink" title="制作dashboard"></a>制作dashboard</h3><h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><blockquote>
-<p>Data Source：数据源一般多为时序数据。<br>Organization：支持多组织部署，组织可以理解为不同的部门，不同的需求方等。<br>User:用户名就是Grafana里的账户，一个用户可以属于一个或者多个组织，而且可以根据角色分配不同的权限。<br>Row:Row是一组Panels，是Dashboard的逻辑划分。一般来说，Rows都是12个单位的宽度，可以自适应大小屏幕。<br>Panel:Grafana里的基本图像模块，可以拖拽来调节大小和位置，有Graph，Singlestat，Dashlist，Table和Text几种类型。<br>Query Editor:可以编辑数据源的不同指标。<br>Dashboard:这个就很好理解了，通常意义上的仪表盘。可以使用Templating和Annotations。</p>
+<p><strong>Data Source：</strong>数据源一般多为时序数据。</p>
+</blockquote>
+<blockquote>
+<p><strong>Organization：</strong>支持多组织部署，组织可以理解为不同的部门，不同的需求方等。</p>
+</blockquote>
+<blockquote>
+<p><strong>User:</strong>用户名就是Grafana里的账户，一个用户可以属于一个或者多个组织，而且可以根据角色分配不同的权限。</p>
+</blockquote>
+<blockquote>
+<p><strong>Row:</strong>Row是一组Panels，是Dashboard的逻辑划分。一般来说，Rows都是12个单位的宽度，可以自适应大小屏幕。</p>
+</blockquote>
+<blockquote>
+<p><strong>Panel:</strong>Grafana里的基本图像模块，可以拖拽来调节大小和位置，有Graph，Singlestat，Dashlist，Table和Text几种类型。</p>
+</blockquote>
+<blockquote>
+<p><strong>Query Editor:</strong>可以编辑数据源的不同指标。</p>
+</blockquote>
+<blockquote>
+<p><strong>Dashboard:</strong>这个就很好理解了，通常意义上的仪表盘。可以使用Templating和Annotations。</p>
 </blockquote>
 
       
